@@ -1,4 +1,12 @@
-body {
+header {
     border: 1px solid #000;
-    width: 50px; height: 50px;
+    height: 100px;
+}
+main {
+    border: 1px solid #000;
+    height: 6000px;
+}
+footer {
+    border: 1px solid #000;
+    height: 400px;
 }
