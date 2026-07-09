@@ -1,12 +1,32 @@
 header {
+    background-color: #000;
+}
+.top-bar {
     border: 1px solid #000;
-    height: 100px;
+    height: 104px;
+    padding-top: 40px; padding-bottom: 40px;
+    padding-left: 40px; padding-right: 40px;
+    display: flex; justify-content: space-between;
+    
+}
+.logo-box {
+    border: 1px solid red;
+}
+.menu01 {
+    border: 1px solid red;
+    color: #fff;
+}
+.menu01-ul {
+    display: flex;
+}
+.user-box {
+    border: 1px solid red;
 }
 main {
     border: 1px solid #000;
-    height: 6000px;
+    height: 6620px;
 }
 footer {
     border: 1px solid #000;
-    height: 400px;
+    height: 431px;
 }
