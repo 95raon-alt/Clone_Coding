@@ -7,11 +7,12 @@ header {
     padding-top: 42px; padding-bottom: 42px;
     padding-left: 64px; padding-right: 64px;
     display: flex; justify-content: space-between;
+    align-items: center;
     
 }
 .logo-box {
     border: 1px solid red;
-    width: 1311px;
+    /* width: 1311px; */
 }
 .logo-box a {
 
@@ -19,8 +20,11 @@ header {
 .logo-box img {
     border: 1px solid orange;
     display: flex;
-    align-items: center;
 
+}
+.right-menu {
+    display: flex; gap: 30px;
+    align-items: center;
 }
 .menu01 {
     border: 1px solid red;
@@ -29,11 +33,28 @@ header {
 }
 .menu01-ul {
     display: flex; gap: 20px;
-    align-items: center;
 }
 .m01-item {
     border: 1px solid orange;
     font-size: 13px; font-weight: 900;
+}
+.m01-item > a {
+    position: relative; 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.m01-item a::after {
+    content: ''; /* 가상 요소를 만들 때 무조건 필수로 들어가야 해! */
+    position: absolute;
+    left: 0; /* 왼쪽 끝에서 시작 */
+    bottom: 0; /* 글자 맨 아래에 붙음 */
+    width: 0; /* 처음에는 가로 길이가 0 (안 보임) */
+    height: 2px; /* 밑줄의 두께 */
+    background-color: #fff; /* 밑줄 색상 (흰색) */
+    transition: width 0.3s ease;
+}
+.m01-item a:hover::after {
+    width: 100%; /* 마우스를 올리면 가로 길이를 100%로 쭈욱 늘려라! */
 }
 .user-box {
     border: 1px solid red;
