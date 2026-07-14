@@ -14,12 +14,12 @@
 .right-menu {
     border: 1px solid green;
     display: flex; gap: 30px;
-    align-items: center;
 }
 .menu01 {
     border: 1px solid red;
     color: #fff;
     display: flex;
+    align-items: center;
 }
 .menu01-ul {
     display: flex; gap: 20px;
@@ -28,30 +28,14 @@
     border: 1px solid orange;
     font-size: 13px; font-weight: 900;
 }
-/* .m01-item > a {
-    position: relative; 
-    display: inline-block;
-    padding-bottom: 5px;
-}
-.m01-item a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s ease;
-}
-.m01-item a:hover::after {
-    width: 100%;
-} */
 .user-box {
     border: 1px solid red;
+    display: flex;
 }
 .user-box-ul {
     color: #fff;
     display: flex; gap: 20px;
+    align-items: center;
 }
 .user-item {
     border: 1px solid orange;
