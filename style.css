@@ -28,6 +28,17 @@
     border: 1px solid orange;
     font-size: 13px; font-weight: 900;
 }
+.m01-item > a {
+    position: relative;
+    /* display: inline-block; */
+    padding-bottom: 5px;
+}
+.m01-item::after {
+    /* 가상요소에 공백으로 놓으면 코드입력할 때 헷갈려서 1로 입력하였습니다.*/
+    content: "1";
+    position: absolute;
+}
+
 .user-box {
     border: 1px solid red;
     display: flex;
@@ -44,6 +55,7 @@ main {
     border: 1px solid #000;
     height: 6620px;
 }
+
 footer {
     border: 1px solid #000;
     height: 431px;
