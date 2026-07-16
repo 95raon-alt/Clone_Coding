@@ -30,12 +30,12 @@
 }
 .m01-item > a {
     position: relative;
+    padding-bottom: 5px;
 }
 .m01-item::after {
     /* 가상요소에 공백으로 놓으면 코드입력할 때 헷갈려서 1로 입력하였습니다.*/
     content: "1";
     position: absolute;
-    padding-bottom: 5px;
     text-decoration: underline;
 }
 
@@ -57,11 +57,7 @@ main {
 }
 .section {
     border: 1px solid #000;
-    display: flex;
-    flex-grow: 1;
 }
-
-
 footer {
     border: 1px solid #000;
     height: 431px;
