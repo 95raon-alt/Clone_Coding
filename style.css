@@ -58,6 +58,10 @@ main {
 .section {
     border: 1px solid #000;
 }
+.section02 {
+    padding: 120px 100px;
+
+}
 footer {
     border: 1px solid #000;
     height: 431px;
