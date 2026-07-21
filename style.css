@@ -38,12 +38,12 @@
 .m01-item a::after {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
+    left: 0; /* 왼쪽 끝에서 시작 */
+    bottom: 0; /* 글자 맨 아래에 붙음 */
+    width: 0; /* 처음에는 가로 길이가 0 (안 보임) */
     height: 2px;
     background-color: #fff;
-    transition: width 0.3s ease;
+    transition: 0.3s ;
 }
 .m01-item a:hover::after {
     width: 100%;
