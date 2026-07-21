@@ -31,24 +31,23 @@
 }
 
 .m01-item a {
-    position: relative; /* 밑줄이 글자를 기준으로 위치를 잡도록 부모를 선언 */
-    display: inline-block; /* <a> 태그 크기를 글자 크기에 딱 맞춤 */
-    padding-bottom: 5px; /* 글자와 밑줄 사이의 간격 */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
 }
-/* 2. 평상시 숨겨져 있는 밑줄(가상 요소) 만들기 */
 .m01-item a::after {
-    content: ''; /* 가상 요소를 만들 때 무조건 필수로 들어가야 해! */
+    content: '';
     position: absolute;
-    left: 0; /* 왼쪽 끝에서 시작 */
-    bottom: 0; /* 글자 맨 아래에 붙음 */
-    width: 0; /* 처음에는 가로 길이가 0 (안 보임) */
-    height: 2px; /* 밑줄의 두께 */
-    background-color: #fff; /* 밑줄 색상 (흰색) */
-    transition: width 0.3s ease; /* 🌟 가로 길이가 변할 때 0.3초 동안 부드럽게 움직여라! */
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
 }
-/* 3. 마우스를 올렸을 때(hover) 밑줄 늘리기 */
 .m01-item a:hover::after {
-    width: 100%; /* 마우스를 올리면 가로 길이를 100%로 쭈욱 늘려라! */
+    width: 100%;
+    /* 마우스를 올리면 가로 길이가 100%로 늘어남 */
 }
 
 .user-box {
