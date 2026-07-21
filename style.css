@@ -2,21 +2,22 @@
     background-color: #000;
     padding: 42px 64px;
     display: flex; justify-content: space-between;
-    align-items: center; 
+    align-items: center;
+    /* position: fixed; */
 }
-.logo-box {
+/* .logo-box {
     border: 1px solid red;
-}
+} */
 .logo-box img {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     display: flex;
 }
 .right-menu {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex; gap: 30px;
 }
 .menu01 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: #fff;
     display: flex;
     align-items: center;
@@ -25,22 +26,33 @@
     display: flex; gap: 20px;
 }
 .m01-item {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     font-size: 13px; font-weight: 900;
 }
-.m01-item > a {
-    position: relative;
-    padding-bottom: 5px;
+
+.m01-item a {
+    position: relative; /* 밑줄이 글자를 기준으로 위치를 잡도록 부모를 선언 */
+    display: inline-block; /* <a> 태그 크기를 글자 크기에 딱 맞춤 */
+    padding-bottom: 5px; /* 글자와 밑줄 사이의 간격 */
 }
-.m01-item::after {
-    /* 가상요소에 공백으로 놓으면 코드입력할 때 헷갈려서 1로 입력하였습니다.*/
-    content: "1";
+/* 2. 평상시 숨겨져 있는 밑줄(가상 요소) 만들기 */
+.m01-item a::after {
+    content: ''; /* 가상 요소를 만들 때 무조건 필수로 들어가야 해! */
     position: absolute;
-    text-decoration: underline;
+    left: 0; /* 왼쪽 끝에서 시작 */
+    bottom: 0; /* 글자 맨 아래에 붙음 */
+    width: 0; /* 처음에는 가로 길이가 0 (안 보임) */
+    height: 2px; /* 밑줄의 두께 */
+    background-color: #fff; /* 밑줄 색상 (흰색) */
+    transition: width 0.3s ease; /* 🌟 가로 길이가 변할 때 0.3초 동안 부드럽게 움직여라! */
+}
+/* 3. 마우스를 올렸을 때(hover) 밑줄 늘리기 */
+.m01-item a:hover::after {
+    width: 100%; /* 마우스를 올리면 가로 길이를 100%로 쭈욱 늘려라! */
 }
 
 .user-box {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
 }
 .user-box-ul {
@@ -48,9 +60,10 @@
     display: flex; gap: 20px;
     align-items: center;
 }
-.user-item {
+/* .user-item {
     border: 1px solid orange;
-}
+} */
+
 main {
     border: 1px solid #000;
     height: 6620px;
@@ -59,9 +72,14 @@ main {
     border: 1px solid #000;
 }
 .section02 {
+    background-color: #000;
+    color: #fff;
     padding: 120px 100px;
-
 }
+.sec02-item {
+    border: 1px solid red;
+}
+
 footer {
     border: 1px solid #000;
     height: 431px;
