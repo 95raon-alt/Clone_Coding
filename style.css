@@ -3,7 +3,12 @@
     padding: 42px 64px;
     display: flex; justify-content: space-between;
     align-items: center;
-    /* position: fixed; */
+    position: fixed; /* 상단바 고정 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
 }
 /* .logo-box {
     border: 1px solid red;
@@ -46,8 +51,7 @@
     transition: 0.3s ;
 }
 .m01-item a:hover::after {
-    width: 100%;
-    /* 마우스를 올리면 가로 길이가 100%로 늘어남 */
+    width: 100%; /* 마우스를 올리면 가로 길이가 100%로 늘어남 */
 }
 
 .user-box {
@@ -66,6 +70,7 @@
 main {
     border: 1px solid #000;
     height: 6620px;
+    margin-top: 108px; /* 상단바와 밀착 */
 }
 .section {
     border: 1px solid #000;
