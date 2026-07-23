@@ -7,7 +7,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 100; /* 상단바가 다른 레이어 요소들을 가리지 못하게 맨 앞으로 끌어올림 */
     box-sizing: border-box;
 }
 /* .logo-box {
