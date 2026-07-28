@@ -1,3 +1,8 @@
+@keyframes bgChange {
+    from { background-color: transparent; } /* 처음엔 투명 */
+    to { background-color: #000000; } /* 나중엔 까맣게 */
+}
+
 .top-bar {
     background-color: #000;
     padding: 42px 64px;
@@ -9,6 +14,10 @@
     width: 100%;
     z-index: 100; /* 상단바가 다른 레이어 요소들을 가리지 못하게 맨 앞으로 끌어올림 */
     box-sizing: border-box;
+
+    animation: bgChange linear forwards; /* bgChange 애니메이션을 실행해라 */
+    animation-timeline: scroll(); /* 시간 대신 '스크롤'에 맞춰서 움직여라! */
+    animation-range: 0 100px; /* 스크롤을 0에서 100px 내리는 동안 옷을 갈아입어라 */
 }
 /* .logo-box {
     border: 1px solid red;
@@ -70,10 +79,14 @@
 main {
     border: 1px solid #000;
     height: 6620px;
-    margin-top: 108px; /* 상단바와 밀착 */
+    /* margin-top: 108px;  */
+    /* 상단바와 밀착 */
 }
 .section {
     border: 1px solid #000;
+}
+.section01 {
+    overflow: hidden;
 }
 .section02 {
     background-color: #000;
