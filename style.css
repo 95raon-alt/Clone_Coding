@@ -1,4 +1,4 @@
-@keyframes bgChange {
+@keyframes bgChange { /* 애니메이션 */
     from { background-color: transparent; } /* 처음엔 투명 */
     to { background-color: #000000; } /* 나중엔 까맣게 */
 }
