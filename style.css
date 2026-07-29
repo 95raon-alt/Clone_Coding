@@ -4,11 +4,13 @@
         padding: 42px 64px; /* 처음 상단바의 기본 패딩 유지 */
     } 
     to {
-        background-color: #000000; /* 나중엔 까맣게 */
-        padding: 14px 64px; /* 스크롤 내리면 위아래 패딩만 14px로 훅 줄어듦! */
+        background-color: #000000; /* 나중엔 검정 */
+        padding: 14px 64px; /* 스크롤 내리면 상•하 패딩 14px로 줄어듦 */
     } 
 }
-
+body {
+    background-color: #000;
+}
 .top-bar {
     background-color: transparent;
     padding: 42px 64px;
@@ -25,19 +27,19 @@
     animation-timeline: scroll(); /* 시간 대신 '스크롤'에 맞춰서 움직여라! */
     animation-range: 200px 100px; /* 스크롤을 0에서 100px 내리는 동안 옷을 갈아입어라 */
 }
-/* .logo-box {
+.logo-box {
     border: 1px solid red;
-} */
+}
 .logo-box img {
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
     display: flex;
 }
 .right-menu {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     display: flex; gap: 30px;
 }
 .menu01 {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     color: #fff;
     display: flex;
     align-items: center;
@@ -46,7 +48,7 @@
     display: flex; gap: 20px;
 }
 .m01-item {
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
     font-size: 13px; font-weight: 900;
 }
 
@@ -70,7 +72,7 @@
 }
 
 .user-box {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
 }
 .user-box-ul {
@@ -78,9 +80,9 @@
     display: flex; gap: 20px;
     align-items: center;
 }
-/* .user-item {
+.user-item {
     border: 1px solid orange;
-} */
+}
 .user-item04 {
     border: 1px solid orange;
     position: relative;
@@ -91,11 +93,12 @@
 }
 
 main {
-    border: 1px solid #000;
-    height: 6620px;
+    border: 1px solid purple;
+    /* height: 6620px; */
+    color: #fff;
 }
 .section {
-    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 255, 0.8);
 }
 .section01 {
     object-fit: contain;
@@ -105,15 +108,17 @@ main {
     object-fit: cover;
 }
 .section02 {
-    background-color: #000;
     color: #fff;
     padding: 120px 100px;
 }
 .sec02-item {
     border: 1px solid red;
 }
+.sec02-item > .sec02-item-text {
+    border: 1px solid orange;
+}
 
 footer {
-    border: 1px solid #000;
+    border: 1px solid purple;
     height: 431px;
 }
