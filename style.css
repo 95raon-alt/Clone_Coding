@@ -90,6 +90,7 @@ body {
 .user-item04 > div {
     border: 1px solid green;
     position: absolute;
+    white-space: nowrap;
 }
 
 main {
