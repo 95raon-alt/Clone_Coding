@@ -116,10 +116,16 @@ main {
 .sec02-item {
     border: 1px solid red;
 }
-.sec02-item > .sec02-item-text {
+.sec02-item-text01 {
     border: 1px solid orange;
     display: flex;
     justify-content: center;
+}
+.sec02-item-text02 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 footer {
