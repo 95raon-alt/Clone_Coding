@@ -12,3 +12,13 @@ a {
     /* background-color: #555; */
     display: block;
 }
+button {
+    /* background-color: transparent; */
+    /* padding: auto; */
+    /* border: none;  */
+    /* outline: none; */
+}
+img {
+    /* background-color: red; */
+    /* display: block; */
+}

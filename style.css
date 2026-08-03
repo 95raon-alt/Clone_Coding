@@ -1,11 +1,12 @@
 @keyframes bgChange { /* 애니메이션 */
     from { 
         background-color: transparent; /* 처음엔 투명 */
-        padding: 42px 64px; /* 처음 상단바의 기본 패딩 유지 */
+        padding: 42px 64px; /* 기본 패딩 유지 */
     } 
     to {
         background-color: #000000; /* 나중엔 검정 */
         padding: 14px 64px; /* 스크롤 내리면 상•하 패딩 14px로 줄어듦 */
+        /* transition: 0.3s; */
     } 
 }
 body {
@@ -25,21 +26,15 @@ body {
 
     animation: bgChange linear forwards; /* bgChange 애니메이션을 실행해라 */
     animation-timeline: scroll(); /* 시간 대신 '스크롤'에 맞춰서 움직여라! */
-    animation-range: 200px 100px; /* 스크롤을 0에서 100px 내리는 동안 옷을 갈아입어라 */
-}
-.logo-box {
-    border: 1px solid red;
+    animation-range: 200px 100px; /* 스크롤을 200px에서 100px 내리는 동안 옷을 갈아입어라 */
 }
 .logo-box img {
-    border: 1px solid orange;
     display: flex;
 }
 .right-menu {
-    border: 1px solid green;
     display: flex; gap: 30px;
 }
 .menu01 {
-    border: 1px solid red;
     color: #fff;
     display: flex;
     align-items: center;
@@ -48,7 +43,6 @@ body {
     display: flex; gap: 20px;
 }
 .m01-item {
-    border: 1px solid orange;
     font-size: 13px; font-weight: 900;
 }
 
@@ -72,7 +66,6 @@ body {
 }
 
 .user-box {
-    border: 1px solid red;
     display: flex;
 }
 .user-box-ul {
@@ -80,17 +73,19 @@ body {
     display: flex; gap: 20px;
     align-items: center;
 }
-.user-item {
-    border: 1px solid orange;
-}
 .user-item04 {
-    border: 1px solid orange;
     position: relative;
 }
 .user-item04 > div {
-    border: 1px solid green;
+    background-color: #000;
+    /* border: 1px solid green; */
+    color: gray;
     position: absolute;
     white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    margin-top: 15px;
 }
 
 main {
