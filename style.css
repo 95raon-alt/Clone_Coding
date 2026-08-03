@@ -76,7 +76,11 @@ body {
 .user-item04 {
     position: relative;
 }
+.user-item04:hover >div {
+    display: block;
+}
 .user-item04 > div {
+    border: 1px solid gray;
     background-color: #000;
     /* border: 1px solid green; */
     color: gray;
@@ -84,8 +88,10 @@ body {
     white-space: nowrap;
     left: 50%;
     transform: translateX(-50%);
-    padding: 15px;
-    margin-top: 15px;
+    padding: 13px;
+    margin-top: 10px;
+    display: none;
+    font-size: 13px;
 }
 
 main {
@@ -112,6 +118,8 @@ main {
 }
 .sec02-item > .sec02-item-text {
     border: 1px solid orange;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
