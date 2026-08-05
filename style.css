@@ -95,9 +95,9 @@ main {
     border: 1px solid purple;
     /* height: 6620px; */
 }
-/* .section {
+.section {
     border: 1px solid rgba(0, 0, 255, 0.8);
-} */
+}
 .section01 {
     object-fit: contain;
 }
@@ -109,15 +109,17 @@ main {
     background-color: #000;
     color: #fff;
     padding: 120px 100px;
-    gap: 50px;
 }
 .sec02-item {
     border: 1px solid red;
+    /* gap: 50px; */
+    padding-bottom: 72px; 
 }
 .sec02-item-text01 {
     border: 1px solid orange;
     display: flex;
     justify-content: center;
+    font-size: 42px;
 }
 .sec02-item-text02 {
     border: 1px solid orange;
@@ -126,24 +128,49 @@ main {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 8px;
+    font-size: 15px; 
 }
 .sec02-item-button {
-    border: 1px solid #fff;
-    text-align: center;
+    border: 1px solid #ffffff80;
+    /* text-align: center; */
+    color: #fff;
+    /* display: flex; */
+    /* justify-content: center; */
+    padding: 20px 30px;
 }
 .section03 {
     background-color: red;
     color: #fff;
     text-align: center;
 }
+.section03 >strong {
+    font-size: 42px;
+}
 .product {
     display: flex;
     justify-content: space-between;
-    }
+}
 .section04 {
+    background-color: #000;
+}
+.section04 >div {
+    margin-top: 120px; margin-bottom: 180px;
+    margin-left: 100px; margin-right: 100px;
+    border: 1px solid orange;
     background-color: #000;
     color: #fff;
     text-align: center;
+}
+.section04 strong {
+    font-size: 42px;
+}
+.section05 {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+.section05 >strong {
+    font-size: 42px;
 }
 
 footer {
