@@ -9,7 +9,8 @@
         /* transition: 0.3s; */
     } 
 }
-
+body {background-color: #000;}
+strong {font-size: 42px;}
 .top-bar {
     padding: 42px 64px;
     display: flex; justify-content: space-between;
@@ -79,7 +80,6 @@
 .user-item04 > div {
     border: 1px solid gray;
     background-color: #000;
-    /* border: 1px solid green; */
     color: gray;
     position: absolute;
     white-space: nowrap;
@@ -106,7 +106,6 @@ main {
     object-fit: cover;
 }
 .section02 {
-    background-color: #000;
     color: #fff;
     padding: 120px 100px;
 }
@@ -119,7 +118,6 @@ main {
     border: 1px solid orange;
     display: flex;
     justify-content: center;
-    font-size: 42px;
 }
 .sec02-item-text02 {
     border: 1px solid orange;
@@ -139,38 +137,28 @@ main {
     padding: 20px 30px;
 }
 .section03 {
-    background-color: red;
+    background-color: rgb(131, 12, 0);
     color: #fff;
     text-align: center;
+    padding: 120px 0px;
 }
-.section03 >strong {
-    font-size: 42px;
+.sec03-item {
+    gap: 10px;
 }
 .product {
     display: flex;
     justify-content: space-between;
 }
-.section04 {
-    background-color: #000;
-}
 .section04 >div {
     margin-top: 120px; margin-bottom: 180px;
     margin-left: 100px; margin-right: 100px;
     border: 1px solid orange;
-    background-color: #000;
     color: #fff;
     text-align: center;
-}
-.section04 strong {
-    font-size: 42px;
 }
 .section05 {
-    background-color: #000;
     color: #fff;
     text-align: center;
-}
-.section05 >strong {
-    font-size: 42px;
 }
 
 footer {
