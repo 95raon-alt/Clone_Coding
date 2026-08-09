@@ -110,17 +110,20 @@ main {
     padding: 120px 100px;
 }
 .sec02-item {
-    border: 1px solid red;
-    /* gap: 50px; */
-    padding-bottom: 72px; 
+    /* border: 1px solid red; */
+    padding-bottom: 72px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 50px;
 }
 .sec02-item-text01 {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     display: flex;
     justify-content: center;
 }
 .sec02-item-text02 {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -130,10 +133,7 @@ main {
 }
 .sec02-item-button {
     border: 1px solid #ffffff80;
-    /* text-align: center; */
     color: #fff;
-    /* display: flex; */
-    /* justify-content: center; */
     padding: 20px 30px;
 }
 .section03 {
