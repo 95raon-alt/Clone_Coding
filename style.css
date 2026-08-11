@@ -33,23 +33,23 @@ strong {font-size: 42px;}
 .right-menu {
     display: flex; gap: 30px;
 }
-.menu01 {
+.right-menu-nav {
     color: #fff;
     display: flex;
     align-items: center;
 }
-.menu01-ul {
+.right-menu-ul {
     display: flex; gap: 20px;
 }
-.m01-item {
+.right-menu-li {
     font-size: 13px; font-weight: 900;
 }
-.m01-item a {
+.right-menu-li a {
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
 }
-.m01-item a::after {
+.right-menu-li a::after {
     content: '';
     position: absolute;
     left: 0; /* 왼쪽 끝에서 시작 */
@@ -59,14 +59,14 @@ strong {font-size: 42px;}
     background-color: #fff;
     transition: 0.3s ;
 }
-.m01-item a:hover::after {
+.right-menu-li a:hover::after {
     width: 100%; /* 마우스를 올리면 가로 길이가 100%로 늘어남 */
 }
 
-.user-box {
+.user-menu {
     display: flex;
 }
-.user-box-ul {
+.user-menu-ul {
     color: #fff;
     display: flex; gap: 20px;
     align-items: center;
@@ -149,20 +149,39 @@ main {
     display: flex;
     justify-content: space-between;
 }
-.section04 >div {
-    margin-top: 120px; margin-bottom: 180px;
-    margin-left: 100px; margin-right: 100px;
-    border: 1px solid orange;
+.section04 {
+    padding: 120px 100px 180px; /* 위 120px, 좌•우 100px, 아래 180px */
+}
+.sec04-strong {
     color: #fff;
     text-align: center;
+    border: 1px solid red;
+}
+.sec04-strong strong {
+    border: 1px solid red;
+}
+.sec04-strong p {
+    border: 1px solid red;
+    margin: 30px 0;
+}
+.grid-banner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.grid-banner p {
+    font-weight: 600;
 }
 .section05 {
     color: #fff;
     text-align: center;
 }
-/* .sec05-item {
-    border: 1px solid orange;
-} */
+.General-product {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 footer {
     border: 1px solid purple;

@@ -11,26 +11,28 @@
     <!-- 상단바 -->
     <header>
         <div class="top-bar">
+            <!-- 1. 로고 -->
             <h1 class="logo-box">
                 <a href="#" target="_self" title="홈페이지 이동">
                     <img src="./image/logo.svg" alt="AOZ">
                 </a>
             </h1>
 
-            <!-- 오른쪽 메뉴 -->
+            <!-- 2. 우측 메뉴 그룹 -->
             <div class="right-menu">
-                <nav class="menu01">
-                    <ul class="menu01-ul">
-                        <li class="m01-item m01-item01"><a href="#" target="_blank" title="상품보기">SHOP</a></li>
-                        <li class="m01-item m01-item02"><a href="#" target="_blank" title="향 테스트">ODORZ TEST</a></li>
-                        <li class="m01-item m01-item03"><a href="#" target="_blank" title="브랜드 소개">BRAND STORY</a></li>
+                <!-- 2-1. 메인 텍스트 메뉴 -->
+                <nav class="right-menu-nav">
+                    <ul class="right-menu-ul">
+                        <!-- nav-item -->
+                        <li class="right-menu-li"><a href="#" target="_blank" title="상품보기">SHOP</a></li>
+                        <li class="right-menu-li"><a href="#" target="_blank" title="향 테스트">ODORZ TEST</a></li>
+                        <li class="right-menu-li"><a href="#" target="_blank" title="브랜드 소개">BRAND STORY</a></li>
                     </ul>
                 </nav>
 
-                <!-- 아이콘 -->
-                <div class="user-box">
-                    <!-- ul.user-box-ul>li.user-item.user-item0$*5>a[href="#" target="_blank" title=""] -->
-                    <ul class="user-box-ul">
+                <!-- 2-2. 유저 아이콘 메뉴 -->
+                <div class="user-menu">
+                    <ul class="user-menu-ul">
                         <li class="user-item user-item01"><a href="#" target="_blank" title="마이페이지">
                             <img src="./image/Sign In.svg" alt="Sign In">
                         </a></li>
@@ -40,10 +42,11 @@
                         <li class="user-item user-item03"><a href="#" target="_blank" title="검색하기">
                             <img src="./image/Search.svg" alt="Search">
                         </a></li>
+                        <!-- 언어 설정 (2차 메뉴 포함) -->
                         <li class="user-item user-item04"><a href="#" title="언어설정">
-                            <img src="./image/Language.svg" alt="Language">
-                            <div>한국어
-                        </a></li></div>
+                            <img src="./image/Language.svg" alt="Language"></a>
+                            <div>한국어</div>
+                        </li>
                         <li class="user-item user-item05"><a href="#" target="_blank" title="메뉴">
                             <img src="./image/menu.svg" alt="메뉴">
                         </a></li>
@@ -55,18 +58,18 @@
 
     <!-- 메인컨텐츠 -->
     <main>
-        <!-- 이미지배너 -->
+        <!-- 1. 이미지배너 -->
         <section class="section section01">
             <img src="./image/section01.jpg" alt="이미지 배너">
         </section>
-        <!-- 브랜드소개 -->
+        <!-- 2. 브랜드소개 -->
         <section class="section section02">
             <div class="sec02-item">
                 <div class="sec02-item-text01">
                     <strong>ALIEN ODORZ</strong>
                 </div>
                 <div class="sec02-item-text02">
-                    AOZ는 FRAGRANCE SPACE 라는</br>
+                    AOZ는 FRAGRANCE SPACE 라는<br>
                     멀티버스 관점을 빌려 향의 본질을 재발견하는 브랜드입니다.
                 </div>
                 <button class="sec02-item-button">
@@ -74,7 +77,7 @@
                 </button>
             </div>
         </section>
-        <!-- 롤링상품 -->
+        <!-- 3. 롤링상품 -->
         <section class="section section03">
             <div class="sec03-item">
                 <div class="sec03-strong">
@@ -97,41 +100,61 @@
                 <div class="product010">10</div>
             </div>
         </section>
-        <!-- 그리드배너 -->
+        <!-- 4. 그리드배너 -->
         <section class="section section04">
             <div class="sec04-strong">
                 <strong>Discover your inherent scent</strong>
                 <p>Make a unique experience</p>
-                <div class="product">
-                    <div class="product01">1</div>
-                    <div class="product02">2</div>
-                    <div class="product03">3</div>
-                    <div class="product04">4</div>
+                <div class="grid-banner">
+                    <div class="product01">
+                        <div class="sec04-01">
+                            <img src="./image/sec04_01.jpg" alt="">
+                        </div>
+                        <p>FRAGRANCE</p>
+                    </div>
+                    <div class="product02">
+                        <div class="sec04-02">
+                            <img src="./image/sec04_02.jpg" alt="">
+                        </div>
+                        <p>FRAGRANCE</p>                       
+                    </div>
+                    <div class="product03">
+                        <div class="sec04-03">
+                            <img src="./image/sec04_03.jpg" alt="">
+                        </div>
+                        <p>FRAGRANCE</p>                     
+                    </div>
+                    <div class="product04">
+                        <div class="sec04-04">
+                            <img src="./image/sec04_04.jpg" alt="">
+                        </div>
+                        <p>FRAGRANCE</p>              
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- 일반상품 -->
+        <!-- 5. 일반상품 -->
         <section class="section section05">
             <div class="sec05-item">
                 <strong>Find your signature scent</strong>
                 <p>Discover your next favorite scent</p>
             </div>
-            <div class="product">
+            <div class="General-product">
                 <div class="product01">1</div>
                 <div class="product02">2</div>
                 <div class="product03">3</div>
                 <div class="product04">4</div>
-                <div class="product04">5</div>
-                <div class="product04">6</div>
-                <div class="product04">7</div>
-                <div class="product04">8</div>
-                <div class="product04">9</div>
-                <div class="product04">10</div>
-                <div class="product04">11</div>
-                <div class="product04">12</div>
+                <div class="product05">5</div>
+                <div class="product06">6</div>
+                <div class="product07">7</div>
+                <div class="product08">8</div>
+                <div class="product09">9</div>
+                <div class="product010">10</div>
+                <div class="product011">11</div>
+                <div class="product012">12</div>
             </div>                        
         </section>
-        <!-- 이미지배너 -->
+        <!-- 6. 이미지배너 -->
         <section class="section section06">일반상품</section>
     </main>
 
