@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alien Odorz - 에이오지 (AOZ) [Pure HTML/CSS Version]</title>
+  
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Pure CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 
+    [CSS 전용 트릭: Checkbox Hack]
+    자바스크립트 없이 체크박스의 :checked 상태를 이용하여
+    모바일 메뉴 열기/닫기를 구현합니다.
+  -->
+  <input type="checkbox" id="menuToggle" class="menu-toggle-input">
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <div class="header-left">
+        <h1 class="logo">
+          <a href="#" aria-label="AOZ 홈으로 이동">
+            <img src="https://alienodorz.com/web/upload/category/logo/v2_ecae88239f1764316b1e4afa265255e5_o8AcD39POa_top.jpg" alt="Alien Odorz">
+          </a>
+        </h1>
+      </div>
+
+      <!-- Navigation & Utilities -->
+      <div class="header-right">
+        <nav class="gnb">
+          <ul class="nav-list">
+            <li><a href="#shop" class="nav-link">SHOP</a></li>
+            <li><a href="#odorz-test" class="nav-link">ODORZ TEST</a></li>
+            <li><a href="#brand" class="nav-link">BRAND STORY</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-utils">
+          <!-- 마이페이지 -->
+          <a href="#" class="util-btn util-mypage" aria-label="마이페이지">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </a>
+
+          <!-- 장바구니 -->
+          <a href="#" class="util-btn util-cart" aria-label="장바구니">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count">0</span>
+          </a>
+
+          <!-- 검색 -->
+          <a href="#search" class="util-btn util-search" aria-label="검색 열기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+
+          <!-- 언어 선택 (KRW) -->
+          <div class="lang-select">
+            <span class="lang-btn">한국어 (KRW)</span>
+          </div>
+
+          <!-- 모바일 햄버거 메뉴 열기 버튼 (label로 체크박스와 연결) -->
+          <label for="menuToggle" class="hamburger-btn" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE MENU DRAWER (CSS ONLY) ==================== -->
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <div class="drawer-logo">ALIEN ODORZ</div>
+      <!-- 닫기 버튼: label로 체크박스를 다시 클릭하여 해제 -->
+      <label for="menuToggle" class="close-drawer-btn" aria-label="메뉴 닫기">✕</label>
+    </div>
+    <div class="drawer-body">
+      <ul class="drawer-nav">
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#odorz-test">ODORZ TEST</a></li>
+        <li><a href="#brand">BRAND STORY</a></li>
+      </ul>
+      <div class="drawer-support">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">교환 및 환불안내</a></li>
+          <li><a href="#">비즈니스 문의</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">매장안내</a></li>
+        </ul>
+      </div>
+      <div class="drawer-auth">
+        <a href="#">Login</a>
+      </div>
+    </div>
+  </div>
+  <!-- 배경 어두워지는 오버레이 (클릭 시 닫힘) -->
+  <label for="menuToggle" class="drawer-overlay" aria-label="메뉴 닫기"></label>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main">
+
+    <!-- 1. 메인 이미지 배너 섹션 -->
+    <section class="section-hero">
+      <div class="hero-banner-wrap">
+        <a href="#shop" class="hero-link">
+          <img src="https://alienodorz.com/web/upload/category/editor/2024/10/07/9288750d41455b64e97ea93a4ea5c783.jpg" alt="AOZ 메인 배너" class="hero-img">
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. 브랜드 스토리 섹션 -->
+    <section class="section-brand" id="brand">
+      <div class="brand-inner">
+        <h2 class="brand-title">ALIEN ODORZ</h2>
+        <p class="brand-desc">
+          AOZ는 FRAGRANCE SPACE 라는<br>
+          멀티버스 관점을 빌려 향의 본질을 재발견하는 브랜드입니다.
+        </p>
+        <a href="#" class="brand-story-btn">Brand Story</a>
+      </div>
+    </section>
+
+    <!-- 3. 시그니처 롤링 상품 섹션 (버건디 배경, CSS Scroll-Snap 적용) -->
+    <section class="section-rolling" id="shop">
+      <div class="rolling-header">
+        <h3 class="rolling-title">Find your signature scent</h3>
+        <p class="rolling-subtitle">Discover your next favorite scent</p>
+      </div>
+
+      <!-- CSS 순수 수평 스크롤 / 스냅 컨테이너 -->
+      <div class="rolling-wrapper">
+        <div class="rolling-track-container">
+          <ul class="rolling-track">
+
+            <!-- 상품 1: SIWA -->
+            <li class="rolling-card" id="card-1">
+              <div class="card-thumb">
+                <a href="#">
+                  <img src="https://alienodorz.com/web/product/medium/202508/6455dc8c7e0ea5007357c14fafb061e1.png" alt="EAU DE PARFUM SIWA 30ml">
+                </a>
+                <div class="card-actions">
+                  <span class="btn-action btn-wish" title="관심상품">♥</span>
+                  <span class="btn-action btn-cart" title="장바구니 담기">🛒</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4 class="product-name"><a href="#">EAU DE PARFUM SIWA 30ml</a></h4>
+                <div class="product-meta">
+                  <span class="product-volume">30ml</span>
+                  <span class="product-price">64,000원</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 상품 2: NIGHT GOWN -->
+            <li class="rolling-card" id="card-2">
+              <div class="card-thumb">
+                <a href="#">
+                  <img src="https://alienodorz.com/web/product/medium/202504/ec9374ae557d106779e64d845d22f4d1.png" alt="EAU DE PARFUM NIGHT GOWN 30ml">
+                </a>
+                <div class="card-actions">
+                  <span class="btn-action btn-wish" title="관심상품">♥</span>
+                  <span class="btn-action btn-cart" title="장바구니 담기">🛒</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4 class="product-name"><a href="#">EAU DE PARFUM NIGHT GOWN 30ml</a></h4>
+                <div class="product-meta">
+                  <span class="product-volume">30ml</span>
+                  <span class="product-price">64,000원</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 상품 3: FORTY WINKS -->
+            <li class="rolling-card" id="card-3">
+              <div class="card-thumb">
+                <a href="#">
+                  <img src="https://alienodorz.com/web/product/medium/202309/ad805b3168080801aac5b514c90259f2.png" alt="EAU DE PARFUM FORTY WINKS 30ml">
+                </a>
+                <div class="card-actions">
+                  <span class="btn-action btn-wish" title="관심상품">♥</span>
+                  <span class="btn-action btn-cart" title="장바구니 담기">🛒</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4 class="product-name"><a href="#">EAU DE PARFUM FORTY WINKS 30ml</a></h4>
+                <div class="product-meta">
+                  <span class="product-volume">30ml</span>
+                  <span class="product-price">64,000원</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 상품 4: MARIMBA -->
+            <li class="rolling-card" id="card-4">
+              <div class="card-thumb">
+                <a href="#">
+                  <img src="https://alienodorz.com/web/product/medium/202309/269ec4f8ad2d5c5abdf8fb80aa529713.png" alt="EAU DE PARFUM MARIMBA 30ml">
+                </a>
+                <div class="card-actions">
+                  <span class="btn-action btn-wish" title="관심상품">♥</span>
+                  <span class="btn-action btn-cart" title="장바구니 담기">🛒</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4 class="product-name"><a href="#">EAU DE PARFUM MARIMBA 30ml</a></h4>
+                <div class="product-meta">
+                  <span class="product-volume">30ml</span>
+                  <span class="product-price">64,000원</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 상품 5: LA TERRE -->
+            <li class="rolling-card" id="card-5">
+              <div class="card-thumb">
+                <a href="#">
+                  <img src="https://alienodorz.com/web/product/medium/202309/05c957fe3b21b867020fc4cebde65da8.png" alt="EAU DE PARFUM LA TERRE 30ml">
+                </a>
+                <div class="card-actions">
+                  <span class="btn-action btn-wish" title="관심상품">♥</span>
+                  <span class="btn-action btn-cart" title="장바구니 담기">🛒</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4 class="product-name"><a href="#">EAU DE PARFUM LA TERRE 30ml</a></h4>
+                <div class="product-meta">
+                  <span class="product-volume">30ml</span>
+                  <span class="product-price">64,000원</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 상품 6: LEIS 30ml -->
+            <li class="rolling-card" id="card-6">
+              <div class="card-thumb">
+                <a href="#">
+                  <img src="https://alienodorz.com/web/product/medium/202309/e24155fb0e62e70b481fb4df3d218083.png" alt="EAU DE PARFUM LEIS 30ml">
+                </a>
+                <div class="card-actions">
+                  <span class="btn-action btn-wish" title="관심상품">♥</span>
+                  <span class="btn-action btn-cart" title="장바구니 담기">🛒</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4 class="product-name"><a href="#">EAU DE PARFUM LEIS 30ml</a></h4>
+                <div class="product-meta">
+                  <span class="product-volume">30ml</span>
+                  <span class="product-price">64,000원</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 상품 7: LEIS 75ml -->
+            <li class="rolling-card" id="card-7">
+              <div class="card-thumb">
+                <a href="#">
+                  <img src="https://alienodorz.com/web/product/medium/202410/29c6813fe5f4f15241cd3d727a28df7c.png" alt="EAU DE PARFUM LEIS 75ml">
+                </a>
+                <div class="card-actions">
+                  <span class="btn-action btn-wish" title="관심상품">♥</span>
+                  <span class="btn-action btn-cart" title="장바구니 담기">🛒</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4 class="product-name"><a href="#">EAU DE PARFUM LEIS 75ml</a></h4>
+                <div class="product-meta">
+                  <span class="product-volume">75ml</span>
+                  <span class="product-price">145,000원</span>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 그리드 4단 배너 섹션 -->
+    <section class="section-grid-banner">
+      <div class="grid-banner-header">
+        <h3 class="grid-banner-title">Discover your inherent scent</h3>
+        <p class="grid-banner-subtitle">Make a unique experience</p>
+      </div>
+      <div class="grid-banner-container">
+        <ul class="grid-banner-list">
+          <li class="grid-banner-item">
+            <a href="#">
+              <div class="img-wrap">
+                <img src="https://alienodorz.com/web/upload/category/editor/2024/10/11/55a40121ed747afda8097f6e5f7d11bc.jpg" alt="Fragrance 1">
+              </div>
+              <strong class="banner-label">FRAGRANCE</strong>
+            </a>
+          </li>
+          <li class="grid-banner-item">
+            <a href="#">
+              <div class="img-wrap">
+                <img src="https://alienodorz.com/web/upload/category/editor/2024/10/11/d0b3a7f32a3641bd44366dd87798925d.jpg" alt="Fragrance 2">
+              </div>
+              <strong class="banner-label">FRAGRANCE</strong>
+            </a>
+          </li>
+          <li class="grid-banner-item">
+            <a href="#">
+              <div class="img-wrap">
+                <img src="https://alienodorz.com/web/upload/category/editor/2024/10/11/a7083aa65e7357debe9f79fb42dd23d0.jpg" alt="Fragrance 3">
+              </div>
+              <strong class="banner-label">FRAGRANCE</strong>
+            </a>
+          </li>
+          <li class="grid-banner-item">
+            <a href="#">
+              <div class="img-wrap">
+                <img src="https://alienodorz.com/web/upload/category/editor/2024/10/11/27ee9f40bdf3543f3fdcd9725a3d1f1a.jpg" alt="Fragrance 4">
+              </div>
+              <strong class="banner-label">FRAGRANCE</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. 일반 상품 진열 섹션 (4열 그리드) -->
+    <section class="section-product-grid">
+      <div class="section-title">
+        <h3>Find your signature scent</h3>
+        <p>Discover your next favorite scent</p>
+      </div>
+
+      <div class="product-grid-container">
+        <ul class="product-grid">
+
+          <!-- 1. VINO -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202607/1547610f95b6e903f2d210d274d908d3.png" alt="EAU DE PARFUM VINO 30ml">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">EAU DE PARFUM VINO 30ml</a></h4>
+              <p class="price">64,000원</p>
+            </div>
+          </li>
+
+          <!-- 2. HAND CREAM LEIS -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202601/48b70c78d7b454ffc524231d678368aa.jpg" alt="센티드 핸드크림 레이 50mL">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">센티드 핸드크림 레이 50mL</a></h4>
+              <p class="price">21,000원</p>
+            </div>
+          </li>
+
+          <!-- 3. SIWA -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202508/6455dc8c7e0ea5007357c14fafb061e1.png" alt="EAU DE PARFUM SIWA 30ml">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">EAU DE PARFUM SIWA 30ml</a></h4>
+              <p class="price">64,000원</p>
+            </div>
+          </li>
+
+          <!-- 4. NIGHT GOWN -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202504/ec9374ae557d106779e64d845d22f4d1.png" alt="EAU DE PARFUM NIGHT GOWN 30ml">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">EAU DE PARFUM NIGHT GOWN 30ml</a></h4>
+              <p class="price">64,000원</p>
+            </div>
+          </li>
+
+          <!-- 5. MUL -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202408/f48ba6226f1b6fde8c624e11e4ac931d.png" alt="EAU DE PARFUM MUL 30ml">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">EAU DE PARFUM MUL 30ml</a></h4>
+              <p class="price">64,000원</p>
+            </div>
+          </li>
+
+          <!-- 6. COTTON BLANC -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202408/9948f6334c2f6f8879165f330e9a9219.png" alt="EAU DE PARFUM COTTON BLANC 30ml">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">EAU DE PARFUM COTTON BLANC 30ml</a></h4>
+              <p class="price">64,000원</p>
+            </div>
+          </li>
+
+          <!-- 7. SOLID DIFFUSER INSERT 3SET -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202308/69561b28450751174a754b3d3a53a16f.png" alt="SOLID DIFFUSER INSERT 3SET">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">SOLID DIFFUSER INSERT 3SET</a></h4>
+              <p class="price">41,000원</p>
+            </div>
+          </li>
+
+          <!-- 8. SOLID DIFFUSER INSERT -->
+          <li class="product-grid-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img src="https://alienodorz.com/web/product/medium/202308/c467ba1c7d52449d2d870b81783b17a2.png" alt="SOLID DIFFUSER INSERT">
+              </a>
+              <div class="hover-actions">
+                <span class="btn-hover-wish" title="관심상품">♥</span>
+                <span class="btn-hover-cart" title="장바구니 담기">🛒</span>
+              </div>
+            </div>
+            <div class="product-detail">
+              <h4 class="name"><a href="#">SOLID DIFFUSER INSERT</a></h4>
+              <p class="price">15,000원</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. 하단 배너 섹션 -->
+    <section class="section-bottom-banner">
+      <div class="bottom-banner-wrap">
+        <a href="#shop">
+          <img src="https://alienodorz.com/web/upload/category/editor/2024/10/07/9288750d41455b64e97ea93a4ea5c783.jpg" alt="하단 배너">
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <!-- Footer Left (Company info, Logo, SNS) -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <a href="#">
+            <img src="https://alienodorz.com/web/upload/NNEditor/20220328/2b5e46bf38fc97ea8ab9a450bb15d3f1.png" alt="Alien Odorz">
+          </a>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">COMPANY</a></li>
+          <li><a href="#">AGREEMENT</a></li>
+          <li><a href="#">PRIVACY POLICY</a></li>
+          <li><a href="#">GUIDE</a></li>
+        </ul>
+
+        <div class="company-info">
+          <p><span class="company-name">에일리언오더즈 주식회사</span> | 대표자 : 이종구</p>
+          <p>사업자등록번호 : 480-87-03714 | 통신판매업신고 : 2025-서울마포-1561</p>
+          <p>대표전화 : 010-8298-2526 | 개인정보보호책임자 : 이종구</p>
+          <p>주소 : 04040 서울 마포구 어울마당로 98 1층 AOZ</p>
+        </div>
+
+        <div class="footer-sns">
+          <a href="https://www.instagram.com/alienodorz/" target="_blank" rel="noopener noreferrer" class="sns-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://pf.kakao.com/_MbnHK" target="_blank" rel="noopener noreferrer" class="sns-link" aria-label="KakaoTalk">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.557 1.707 4.8 4.27 6.05-.188.7-.68 2.532-.778 2.923-.122.488.179.482.377.351.156-.104 2.478-1.684 3.486-2.37.525.076 1.07.117 1.645.117 4.97 0 9-3.185 9-7.115S16.97 3 12 3z"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="copyright">Copyright © <strong>Alien Odorz</strong>. All rights reserved.</p>
+      </div>
+
+      <!-- Footer Right (INFO, SOCIAL) -->
+      <div class="footer-right">
+        <div class="footer-col">
+          <strong class="col-title">INFO</strong>
+          <ul class="col-list">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">교환 및 환불안내</a></li>
+            <li><a href="#">비즈니스 문의</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">매장안내</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong class="col-title">SOCIAL</strong>
+          <ul class="col-list">
+            <li><a href="https://www.instagram.com/alienodorz/" target="_blank">INSTAGRAM</a></li>
+            <li><a href="https://pf.kakao.com/_MbnHK" target="_blank">KAKAOTALK</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
