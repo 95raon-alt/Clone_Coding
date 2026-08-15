@@ -98,10 +98,10 @@ main {
 .section {
     border: 1px solid rgba(0, 0, 255, 0.8);
 }
-.section01 {
+.section01, .section06  {
     object-fit: contain;
 }
-.section01 >img {
+.section01, .section06 >img {
     width: 100%;
     object-fit: cover;
 }
