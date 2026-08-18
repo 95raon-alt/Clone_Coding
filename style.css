@@ -173,6 +173,9 @@ main {
     border: 1px solid red;
     padding: 90px 0 40px 0; /* 상 90px, 우 0, 하 40px, 좌 0 */
 }
+.sec05-item p {
+    margin: 10px 0;
+}
 .General-product {
     border: 1px solid red;
     display: flex;
