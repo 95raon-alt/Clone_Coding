@@ -178,8 +178,14 @@ main {
 }
 .General-product {
     border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 120px;
+}
+.sec05-product {
+    border: 1px solid red;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .section06 {
     object-fit: contain;
