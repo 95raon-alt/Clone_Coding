@@ -170,22 +170,25 @@ main {
     padding: 0 64px;
 }
 .sec05-item {
-    border: 1px solid red;
     padding: 90px 0 40px 0; /* 상 90px, 우 0, 하 40px, 좌 0 */
 }
 .sec05-item p {
     margin: 10px 0;
 }
 .General-product {
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 120px;
+    gap: 30px;
 }
 .sec05-product {
-    border: 1px solid red;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sec05-product img {
+    width: 100%;
+    height: auto;
 }
 .section06 {
     object-fit: contain;
