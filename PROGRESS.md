@@ -7,14 +7,14 @@
 | 구역 | 내용 | 상태 | 비고 |
 | :--- | :--- | :---: | :--- |
 | **Header** | **상단바 (로고, 텍스트 메뉴, 아이콘 메뉴)** | **✅ 완료 (100%)** | 구조, 직관적인 네이밍, CSS 매칭 완료 |
-| **CSS 구조** | **`css/` 폴더 분리 (초기화, 애니메이션, 스타일)** | **✅ 완료 (100%)** | `normal.css`, `animation.css`, `style.css` |
-| **Section 01** | 상단 메인 이미지 풀배너 | ⏳ 대기 (0%) | 다음 작업 시작점 |
+| **CSS 구조** | **`css/` 폴더 분리 (초기화, 애니메이션, 스타일)** | **✅ 완료 (100%)** | `normal.css`, `animation.css`, `style.css` 정리 완료 |
+| **Footer** | **하단바 (푸터 로고 및 좌/우 2분할 레이아웃)** | **✅ 완료 (100%)** | 클래스명(`footer-left`, `footer-right`) 검토 완료 |
+| **Section 01** | 상단 메인 이미지 풀배너 | ⏳ 대기 (0%) | **다음 작업 시작점** |
 | **Section 02** | 브랜드 소개 (ALIEN ODORZ) | ⏳ 대기 (0%) | 텍스트/버튼 컨테이너 정리 예정 |
 | **Section 03** | 롤링 상품 영역 | ⏳ 대기 (0%) | `product01` 중복 방지 및 슬라이더 구조 점검 |
 | **Section 04** | 그리드 배너 (4분할) | ⏳ 대기 (0%) | `sec04-strong` 컨테이너 구조 개선 예정 |
 | **Section 05** | 일반 상품 목록 그리드 | ⏳ 대기 (0%) | 대문자 클래스(`General-product`) 및 세로 정렬 개선 |
 | **Section 06** | 하단 이미지 풀배너 | ⏳ 대기 (0%) | Section 01과 공통 스타일 점검 |
-| **Footer** | 하단바 (푸터 로고 및 메뉴) | ⏳ 대기 (0%) | 최종 레이아웃 점검 |
 
 ---
 
@@ -25,18 +25,17 @@
 * **`css/animation.css`** : `@keyframes bgChange` 및 모션/애니메이션 모음
 * **`css/style.css`** : 상단바(`header`), 본문(`main`), 하단바(`footer`)의 레이아웃 및 디자인 클래스
 
-### [HTML 상단바 구조]
+### [HTML 상단바 & 하단바 구조]
 ```html
+<!-- 상단바 (Header) -->
 <header>
     <div class="top-bar">
-        <!-- 1. 로고 -->
         <h1 class="logo">
             <a href="#"><img src="./image/logo.svg" alt="AOZ"></a>
         </h1>
 
-        <!-- 2. 우측 전체 메뉴 영역 -->
         <div class="right-menu">
-            <!-- 2-1. 메인 글자 메뉴 -->
+            <!-- 텍스트 메뉴 -->
             <nav class="text-menu">
                 <ul class="text-ul">
                     <li class="text-item"><a href="https://alienodorz.com/product/list.html?cate_no=23" target="_top">SHOP</a></li>
@@ -45,7 +44,7 @@
                 </ul>
             </nav>
 
-            <!-- 2-2. 우측 아이콘 메뉴 -->
+            <!-- 아이콘 메뉴 -->
             <div class="icon-menu">
                 <ul class="icon-ul">
                     <li class="icon-item"><a href="#" target="_blank" title="마이페이지"><img src="./image/header/01_Sign_In.svg" alt="마이페이지"></a></li>
@@ -62,16 +61,23 @@
         </div>
     </div>
 </header>
-```
 
-### [네이밍 포인트]
-* `text-menu` vs `icon-menu`로 명확한 대칭 구조 형성
-* `text-item`, `icon-item`으로 불필요한 번호 클래스(`01~05`) 제거
-* 특수 항목만 `icon-lang`, `lang-dropdown`으로 직관적 명명
+<!-- 하단바 (Footer) -->
+<footer>
+    <div class="footer-menu">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <a href="#"><img src="./image/logo.svg" alt="AOZ"></a>
+            </div>
+        </div>
+        <div class="footer-right"></div>
+    </div>
+</footer>
+```
 
 ---
 
-## 🚀 3. 다음 작업 시 점검할 섹션별 가이드
+## 🚀 3. 다음 작업 시 점검할 섹션별 가이드 (Section 01부터 시작)
 
 다음에 작업을 재개할 때 아래 순서대로 확인하면서 수정하시면 됩니다:
 
@@ -91,10 +97,10 @@
 * `sec05-product`에 `flex-direction: column;`을 적용하여 이미지 아래에 상품명/가격이 오도록 세로 정렬
 * `sec05-text01`, `text02`, `text03` ➡️ `product-name`, `product-size`, `product-price` 등으로 직관화
 
-### 5️⃣ Footer (하단바)
-* 푸터 좌/우 배치 및 로고 스타일 최종 확인
+### 5️⃣ Section 06 (하단 이미지 풀배너)
+* Section 01과 공통 스타일 점검
 
 ---
 
 > 💡 **다음에 다시 작업하실 때:**  
-> "PROGRESS.md 보고 Section 01부터 시작하자"라고 말씀해 주시면 바로 이어서 진행할 수 있습니다!
+> **"PROGRESS.md 보고 Section 01부터 시작하자"**라고 말씀해 주시면 바로 이어서 진행할 수 있습니다!
