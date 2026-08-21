@@ -1,16 +1,4 @@
-@keyframes bgChange { /* 애니메이션 */
-    from { 
-        background-color: transparent; /* 처음엔 투명 */
-        padding: 42px 64px; /* 기본 패딩 유지 */
-    } 
-    to {
-        background-color: #000000; /* 나중엔 검정 */
-        padding: 14px 64px; /* 스크롤 내리면 상•하 패딩 14px로 줄어듦 */
-        /* transition: 0.3s; */
-    } 
-}
-body {background-color: #000;}
-strong {font-size: 42px;}
+/* 상단바 */
 .top-bar {
     padding: 42px 64px;
     display: flex; justify-content: space-between;
@@ -26,30 +14,34 @@ strong {font-size: 42px;}
     animation-timeline: scroll(); /* 시간 대신 '스크롤'에 맞춰서 움직여라! */
     animation-range: 200px 100px; /* 스크롤을 200px에서 100px 내리는 동안 옷을 갈아입어라 */
 }
-.logo-box img {
+/* 1. 로고 */
+/* .logo img {
     display: flex;
-}
+} */
 
+/* 2. 우측 전체 메뉴 영역 */
 .right-menu {
     display: flex; gap: 30px;
 }
-.right-menu-nav {
+
+/* 2-1. 메인 글자 메뉴 */
+.text-menu {
     color: #fff;
     display: flex;
     align-items: center;
 }
-.right-menu-ul {
+.text-ul {
     display: flex; gap: 20px;
 }
-.right-menu-li {
-    font-size: 13px; font-weight: 900;
+.text-item {
+    font-size: 13px; font-weight: 900; 
 }
-.right-menu-li a {
+.text-item a {
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
 }
-.right-menu-li a::after {
+.text-item a::after {
     content: '';
     position: absolute;
     left: 0; /* 왼쪽 끝에서 시작 */
@@ -59,25 +51,27 @@ strong {font-size: 42px;}
     background-color: #fff;
     transition: 0.3s ;
 }
-.right-menu-li a:hover::after {
+.text-item a:hover::after {
     width: 100%; /* 마우스를 올리면 가로 길이가 100%로 늘어남 */
 }
 
-.user-menu {
+/* 2-2. 우측 아이콘 메뉴 */
+/* .icon-menu {
     display: flex;
-}
-.user-menu-ul {
+} */
+.icon-ul {
     color: #fff;
     display: flex; gap: 20px;
     align-items: center;
 }
-.user-item04 {
+/* 언어 설정 (2차 메뉴 포함 */
+.icon-lang {
     position: relative;
 }
-.user-item04:hover >div {
+.icon-lang:hover .lang-dropdown {
     display: block;
 }
-.user-item04 > div {
+.lang-dropdown {
     border: 1px solid gray;
     background-color: #000;
     color: gray;
@@ -91,6 +85,7 @@ strong {font-size: 42px;}
     font-size: 13px;
 }
 
+/* 메인컨텐츠 */
 main {
     border: 1px solid purple;
     /* height: 6620px; */

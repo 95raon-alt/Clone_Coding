@@ -4,51 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AOZ 에이오지</title>
-    <link rel="stylesheet" href="normal.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- 1. 기본 스타일 초기화 -->
+    <link rel="stylesheet" href="./css/normal.css">
+    <!-- 2. 애니메이션 모음 -->
+    <link rel="stylesheet" href="./css/animation.css">
+    <!-- 3. 메인 스타일 및 디자인 -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- 상단바 -->
     <header>
         <div class="top-bar">
+
             <!-- 1. 로고 -->
-            <h1 class="logo-box">
-                <a href="#" target="_self" title="홈페이지 이동">
-                    <img src="./image/logo.svg" alt="AOZ">
-                </a>
+            <h1 class="logo">
+                <a href="#"><img src="./image/logo.svg" alt="AOZ"></a>
             </h1>
 
-            <!-- 2. 우측 메뉴 그룹 -->
+            <!-- 2. 우측 전체 메뉴 영역 -->
             <div class="right-menu">
-                <!-- 2-1. 메인 텍스트 메뉴 -->
-                <nav class="right-menu-nav">
-                    <ul class="right-menu-ul">
+
+                <!-- 2-1. 메인 글자 메뉴 -->
+                <nav class="text-menu">
+                    <ul class="text-ul">
                         <!-- nav-item -->
-                        <li class="right-menu-li"><a href="#" target="_blank" title="상품보기">SHOP</a></li>
-                        <li class="right-menu-li"><a href="#" target="_blank" title="향 테스트">ODORZ TEST</a></li>
-                        <li class="right-menu-li"><a href="#" target="_blank" title="브랜드 소개">BRAND STORY</a></li>
+                        <li class="text-item"><a href="https://alienodorz.com/product/list.html?cate_no=23" target="_top">SHOP</a></li>
+                        <li class="text-item"><a href="#" target="_top">ODORZ TEST</a></li>
+                        <li class="text-item"><a href="#" target="_top">BRAND STORY</a></li>
                     </ul>
                 </nav>
 
-                <!-- 2-2. 유저 아이콘 메뉴 -->
-                <div class="user-menu">
-                    <ul class="user-menu-ul">
-                        <li class="user-item user-item01"><a href="#" target="_blank" title="마이페이지">
-                            <img src="./image/header/01_Sign_In.svg" alt="Sign In">
+                <!-- 2-2. 우측 아이콘 메뉴 -->
+                <div class="icon-menu">
+                    <ul class="icon-ul">
+                        <li class="icon-item"><a href="#" target="_blank" title="마이페이지">
+                            <img src="./image/header/01_Sign_In.svg" alt="마이페이지">
                         </a></li>
-                        <li class="user-item user-item02"><a href="#" target="_blank" title="장바구니">
-                            <img src="./image/header/02_Cart.svg" alt="Cart">
+                        <li class="icon-item"><a href="#" target="_blank" title="장바구니">
+                            <img src="./image/header/02_Cart.svg" alt="장바구니">
                         </a></li>
-                        <li class="user-item user-item03"><a href="#" target="_blank" title="검색하기">
-                            <img src="./image/header/03_Search.svg" alt="Search">
+                        <li class="icon-item"><a href="#" target="_blank" title="검색">
+                            <img src="./image/header/03_Search.svg" alt="검색">
                         </a></li>
+
                         <!-- 언어 설정 (2차 메뉴 포함) -->
-                        <li class="user-item user-item04"><a href="#" title="언어설정">
-                            <img src="./image/header/04_Language.svg" alt="Language"></a>
-                            <div>한국어</div>
+                        <li class="icon-item icon-lang"><a href="#" title="언어설정">
+                            <img src="./image/header/04_Language.svg" alt="언어설정"></a>
+                            <div class="lang-dropdown">한국어</div>
                         </li>
-                        <li class="user-item user-item05"><a href="#" target="_blank" title="메뉴">
-                            <img src="./image/header/05_menu.svg" alt="메뉴">
+                        <li class="icon-item"><a href="#" target="_blank" title="전체메뉴">
+                            <img src="./image/header/05_menu.svg" alt="전체메뉴">
                         </a></li>
                     </ul>
                 </div>
