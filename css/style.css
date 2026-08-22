@@ -139,7 +139,7 @@ main {
 }
 .product {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .section04 {
     padding: 120px 100px 180px; /* 상 120px, (좌•)우 100px, 하 180px */
