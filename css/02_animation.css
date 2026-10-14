@@ -1,0 +1,12 @@
+/* 1. 상단바 */
+@keyframes bgChange { /* 애니메이션 */
+    from { 
+        background-color: transparent; /* 처음엔 투명 */
+        padding: 42px 64px; /* 기본 패딩 유지 */
+    } 
+    to {
+        background-color: #000000; /* 나중엔 검정 */
+        padding: 14px 64px; /* 스크롤 내리면 상•하 패딩 14px로 줄어듦 */
+        /* transition: 0.3s; */
+    } 
+}
