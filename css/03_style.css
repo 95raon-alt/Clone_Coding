@@ -139,8 +139,10 @@ main {
     padding: 120px 0px;
 }
 .sec03-item {
-    gap: 100px;
-    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px 40px;
 }
 .product {
     display: flex;
